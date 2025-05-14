@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Watchparty Tickets</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1 id="siteLogo">⚽ Football Watchparty!</h1>
+        <p>Get your tickets for the big match this Saturday!</p>
+        <div id="secretMessage" class="hidden">Secret: Use code 'GOAL' for 10% off! (Just kidding, but you found the secret!)</div>
+    </header>
+
+    <main>
+        <section id="event-info">
+            <h2>Event Details</h2>
+            <div class="tabs">
+                <div class="tab-buttons">
+                    <button class="tab-button active" data-tab="details">Match Details</button>
+                    <button class="tab-button" data-tab="venue">Venue Info</button>
+                    <button class="tab-button" data-tab="tickets">Ticket Types</button>
+                </div>
+
+                <div id="details" class="tab-content active">
+                    <h3>The Ultimate Watchparty Experience!</h3>
+                    <p>Join us this Saturday to watch the thrilling match live on our massive screens. Great atmosphere, food, and drinks available.</p>
+                    <p><strong>Date:</strong> This Saturday</p>
+                    <p><strong>Time:</strong> Kick-off + Pre-show (Check local listings for exact match time, doors open 1 hour before)</p>
+                </div>
+
+                <div id="venue" class="tab-content">
+                    <h3>Our Venue</h3>
+                    <p>Located at [Your Venue Address Here]. We have ample seating, a state-of-the-art sound system, and multiple large screens ensuring you won't miss a single moment.</p>
+                    <p>Easy access via public transport and parking available.</p>
+                </div>
+
+                <div id="tickets" class="tab-content">
+                    <h3>Ticket Options</h3>
+                    <p>Standard Entry: Access to main viewing area.</p>
+                    <p>VIP Package: Priority seating, complimentary drink and snack.</p>
+                    <p>Choose your preferred type when purchasing below!</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery">
+            <h2>Venue Sneak Peek</h2>
+            <div class="slideshow-container">
+                <img src="https://via.placeholder.com/600x400?text=Venue+View+1" alt="Venue View 1" class="slide active">
+                <img src="https://via.placeholder.com/600x400?text=Venue+View+2" alt="Venue View 2" class="slide">
+                <img src="https://via.placeholder.com/600x400?text=Venue+View+3" alt="Venue View 3" class="slide">
+            </div>
+        </section>
+
+        <section id="ticket-form">
+            <h2>Purchase Tickets</h2>
+            <form id="purchaseForm">
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <div class="error" id="nameError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+                    <div class="error" id="emailError"></div>
+                </div>
+
+                 <div class="form-group">
+                    <label for="ticketType">Ticket Type:</label>
+                    <select id="ticketType" name="ticketType" required>
+                        <option value="">Select Type</option>
+                        <option value="standard">Standard Entry</option>
+                        <option value="vip">VIP Package</option>
+                    </select>
+                     <div class="error" id="ticketTypeError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+                    <div class="error" id="quantityError"></div>
+                    <div class="feedback" id="quantityFeedback"></div> </div>
+
+                <button type="submit" id="buyButton">Buy Tickets</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Watchparty Tickets</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
